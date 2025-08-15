@@ -26,6 +26,36 @@ int main() {
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+
+    //Cadastro da Carta 1
+    printf("Programa para Cadastro de cartas do Jogo Super Trunfo!\n");
+    printf("\nIniciando cadastro da primeira carta.\n");
+
+    printf("Digite a letra Referente ao estado da cidade(opções validas de 'A' a 'H')\n");
+    scanf("%c", &estado1);
+
+    printf("Digite o código da carta(Código deve começar com a Letra referente ao estado,seguida de um número de 01 a 04 (ex: A01, B03))\n");
+    scanf("%s", codigo_da_carta1);
+
+    // Como foi pedido para usar a função scanf só será possivel imprimir a primeira palavra que foi digitada pelo usuario;
+    printf("Digite o nome da cidade");
+    scanf("%s", nome_cidade1);
+
+    printf("Digite o número de habitantes da cidade\n");
+    scanf("%i", populacao1);
+
+    printf("Digite A área da cidade em quilômetros quadrados.\n");
+    scanf("%f", area_km_quadrado1);
+
+    printf("Digite o Produto Interno Bruto da cidade(PIB)");
+    scanf("%f", pib1);
+
+    printf("Digite a quantidade de pontos turísticos da cidade");
+    scanf("%i", numero_pontos_turisticos1);
+
+    printf("Cadastro da carta 1 realizado com sucesso");
+    // Fim do cadastro da carta 1
+
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
