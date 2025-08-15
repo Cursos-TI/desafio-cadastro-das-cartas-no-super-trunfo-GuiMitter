@@ -72,14 +72,6 @@ int main() {
     pib_per_capita1 = (float) pib1 / populacao1;
 
 
-
-
-
-
-
-
-
-
     //Cadastro da Carta 2
     printf("\nIniciando cadastro da segunda carta.\n");
 
@@ -132,6 +124,10 @@ int main() {
     printf("PIB: %.3f bilhões de reais\n",pib1);
     printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos1);
 
+    //Exibir densidade da população e pib per capita(nivel intermediario)
+    printf("Densidade Populacional: %.2f\n",densidade_populacional1);
+    printf("PIB per Capita: %.2f\n",pib_per_capita1);
+
 
     //Exibir carta 2
     printf("\nCarta 2:\n");
@@ -141,6 +137,11 @@ int main() {
     printf("População: %i\n",populacao2);
     printf("Área: %.3f Km²\n",area_km_quadrado2);
     printf("PIB: %.3f bilhões de reais\n",pib2);
-    printf("Número de Pontos Turísticos: %i\n\n",numero_pontos_turisticos2);
+    printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos2);
+
+    //Exibir densidade da população e pib per capita(nivel intermediario)
+    printf("Densidade Populacional: %.2f\n",densidade_populacional2);
+    printf("PIB per Capita: %.2f\n",pib_per_capita2);
+
     return 0;
 }
