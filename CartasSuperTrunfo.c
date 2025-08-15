@@ -16,11 +16,19 @@ int main() {
     int populacao1, numero_pontos_turisticos1;
     float area_km_quadrado1, pib1;
 
+    //mais duas variaveis adicionadas para cumprir o nivel intermediario
+    float densidade_populacional1, pib_per_capita1;
+
+
     //CARTA 2: 
     char estado2;
     char codigo_da_carta2[4], nome_cidade2[20];
     int populacao2, numero_pontos_turisticos2;
     float area_km_quadrado2, pib2;
+
+    
+    //mais duas variaveis adicionadas para cumprir o nivel intermediario
+    float densidade_populacional2, pib_per_capita2;
 
 
     // Cadastro das Cartas:
@@ -57,6 +65,21 @@ int main() {
     printf("Cadastro da carta 1 realizado com sucesso\n");
     // Fim do cadastro da carta 1
 
+    //calculo de Desidade populacioanal
+    densidade_populacional1 = (float)populacao1/area_km_quadrado1;
+
+    //cauculo de PIB per capita
+    pib_per_capita1 = (float) pib1 / populacao1;
+
+
+
+
+
+
+
+
+
+
     //Cadastro da Carta 2
     printf("\nIniciando cadastro da segunda carta.\n");
 
@@ -85,6 +108,15 @@ int main() {
     printf("Cadastro da carta 2 realizado com sucesso\n");
     // Fim do cadastro da carta 2
 
+    
+    //calculo de Desidade populacioanal
+    densidade_populacional2 = (float)populacao2/area_km_quadrado2;
+
+    //cauculo de PIB per capita
+    pib_per_capita2 = (float) pib2 / populacao2;
+
+
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -99,6 +131,7 @@ int main() {
     printf("Área: %.3f Km²\n",area_km_quadrado1);
     printf("PIB: %.3f bilhões de reais\n",pib1);
     printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos1);
+
 
     //Exibir carta 2
     printf("\nCarta 2:\n");
