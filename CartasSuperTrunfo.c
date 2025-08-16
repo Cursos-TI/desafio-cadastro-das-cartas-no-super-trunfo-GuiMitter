@@ -23,7 +23,7 @@ int main() {
     float densidade_populacional1, pib_per_capita1;
 
     //Variavel super poder(nivel mestre)
-    float supor_poder1;
+    float super_poder1;
 
 
     //CARTA 2: 
@@ -40,7 +40,7 @@ int main() {
     float densidade_populacional2, pib_per_capita2;
 
     //Variavel super poder(nivel mestre)
-    float supor_poder2;
+    float super_poder2;
 
 
 
@@ -64,7 +64,7 @@ int main() {
     scanf("%s", nome_cidade1);
 
     printf("Digite o número de habitantes da cidade\n");
-    scanf("%i", &populacao1);
+    scanf("%u", &populacao1);
 
     printf("Digite A área da cidade em quilômetros quadrados.\n");
     scanf("%f", &area_km_quadrado1);
@@ -88,7 +88,7 @@ int main() {
     float densidade_populacional1_invertida = (1/densidade_populacional1);
 
     //cauculo super poder
-    supor_poder1 = populacao1+area_km_quadrado1+pib1+numero_pontos_turisticos1+pib_per_capita1+densidade_populacional1_invertida;
+    super_poder1 = populacao1+area_km_quadrado1+pib1+numero_pontos_turisticos1+pib_per_capita1+densidade_populacional1_invertida;
 
 
     //Cadastro da Carta 2
@@ -105,7 +105,7 @@ int main() {
     scanf("%s", nome_cidade2);
 
     printf("Digite o número de habitantes da cidade\n");
-    scanf("%i", &populacao2);
+    scanf("%u", &populacao2);
 
     printf("Digite A área da cidade em quilômetros quadrados.\n");
     scanf("%f", &area_km_quadrado2);
@@ -130,7 +130,7 @@ int main() {
     float densidade_populacional2_invertida = (1/densidade_populacional2);
 
      //cauculo super poder
-    supor_poder2 = populacao2+area_km_quadrado2+pib2+numero_pontos_turisticos2+pib_per_capita2+densidade_populacional2_invertida;
+    super_poder2 = populacao2+area_km_quadrado2+pib2+numero_pontos_turisticos2+pib_per_capita2+densidade_populacional2_invertida;
 
 
 
@@ -150,9 +150,13 @@ int main() {
     printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos1);
 
     //Exibir densidade da população e pib per capita(nivel intermediario)
-    printf("Densidade Populacional: %.2f\n",densidade_populacional1);
-    printf("PIB per Capita: %.2f\n",pib_per_capita1);
+    printf("Densidade Populacional: %.6f\n",densidade_populacional1);
+    printf("PIB per Capita: %.6f\n",pib_per_capita1);
 
+    //exibir super poder
+    printf("Super poder: %.2f\n",super_poder1);
+
+    printf("\n====================\n");
 
     //Exibir carta 2
     printf("\nCarta 2:\n");
@@ -165,8 +169,36 @@ int main() {
     printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos2);
 
     //Exibir densidade da população e pib per capita(nivel intermediario)
-    printf("Densidade Populacional: %.2f\n",densidade_populacional2);
-    printf("PIB per Capita: %.2f\n",pib_per_capita2);
+    printf("Densidade Populacional: %.6f\n",densidade_populacional2);
+    printf("PIB per Capita: %.6f\n",pib_per_capita2);
+
+    //exibir super poder
+    printf("Super poder: %.2f\n",super_poder2);
+    printf("\n====================\n");
+
+    //comparação entre as cartas
+
+
+    int resultado_populacao = populacao1>populacao2;
+    int resultado_area = area_km_quadrado1>area_km_quadrado2;
+    int resultado_pib = pib1>pib2;
+    int resultado_turistico = numero_pontos_turisticos1>numero_pontos_turisticos2;
+    int resultado_densidade_invertida = densidade_populacional1_invertida<densidade_populacional2_invertida;
+    int resultado_pib_per_capita = pib_per_capita1>pib_per_capita2;
+    int resultado_super_poder = super_poder1>super_poder2;
+
+    //exibição de resultado
+    printf("Comparação de Cartas:\n\n");
+
+    printf("População: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_populacao);
+    printf("Área: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_area);
+    printf("PIB: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_pib);
+    printf("Pontos Turisticos: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_turistico);
+    printf("Densidade Populacional: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_densidade_invertida);
+    printf("PIB per Capita: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_pib_per_capita);
+    printf("Super Poder: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_super_poder);
+
+
 
     return 0;
 }
