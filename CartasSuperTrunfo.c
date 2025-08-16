@@ -187,7 +187,7 @@ int main() {
     int resultado_pib_per_capita = pib_per_capita1>pib_per_capita2;
     int resultado_super_poder = super_poder1>super_poder2;
 
-    //exibição de resultado
+    //exibição de resultado.
     printf("Comparação de Cartas:\n\n");
 
     printf("População: Carta 1 venceu(1 = SIM, 0 = Não): %i\n", resultado_populacao);
