@@ -13,22 +13,35 @@ int main() {
     //CARTA 1: 
     char estado1;
     char codigo_da_carta1[4], nome_cidade1[20];
-    int populacao1, numero_pontos_turisticos1;
+    int numero_pontos_turisticos1;
     float area_km_quadrado1, pib1;
+
+    //declaração variavel população como unsigned long int(desafio mestre)
+    unsigned long int populacao1;
 
     //mais duas variaveis adicionadas para cumprir o nivel intermediario
     float densidade_populacional1, pib_per_capita1;
+
+    //Variavel super poder(nivel mestre)
+    float supor_poder1;
 
 
     //CARTA 2: 
     char estado2;
     char codigo_da_carta2[4], nome_cidade2[20];
-    int populacao2, numero_pontos_turisticos2;
+    int numero_pontos_turisticos2;
     float area_km_quadrado2, pib2;
+
+    //declaração variavel população como unsigned long int(desafio mestre)
+    unsigned long int populacao2;
 
     
     //mais duas variaveis adicionadas para cumprir o nivel intermediario
     float densidade_populacional2, pib_per_capita2;
+
+    //Variavel super poder(nivel mestre)
+    float supor_poder2;
+
 
 
     // Cadastro das Cartas:
@@ -71,6 +84,12 @@ int main() {
     //cauculo de PIB per capita
     pib_per_capita1 = (float) pib1 / populacao1;
 
+    //densidade_populacional_invertida(nivel mestre)
+    float densidade_populacional1_invertida = (1/densidade_populacional1);
+
+    //cauculo super poder
+    supor_poder1 = populacao1+area_km_quadrado1+pib1+numero_pontos_turisticos1+pib_per_capita1+densidade_populacional1_invertida;
+
 
     //Cadastro da Carta 2
     printf("\nIniciando cadastro da segunda carta.\n");
@@ -107,6 +126,12 @@ int main() {
     //cauculo de PIB per capita
     pib_per_capita2 = (float) pib2 / populacao2;
 
+    //densidade_populacional_invertida(nivel mestre)
+    float densidade_populacional2_invertida = (1/densidade_populacional2);
+
+     //cauculo super poder
+    supor_poder2 = populacao2+area_km_quadrado2+pib2+numero_pontos_turisticos2+pib_per_capita2+densidade_populacional2_invertida;
+
 
 
     // Exibição dos Dados das Cartas:
@@ -119,7 +144,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n",codigo_da_carta1);
     printf("Nome da Cidade: %s\n",nome_cidade1);
-    printf("População: %i\n",populacao1);
+    printf("População: %u\n",populacao1);
     printf("Área: %.3f Km²\n",area_km_quadrado1);
     printf("PIB: %.3f bilhões de reais\n",pib1);
     printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos1);
@@ -134,7 +159,7 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n",codigo_da_carta2);
     printf("Nome da Cidade: %s\n",nome_cidade2);
-    printf("População: %i\n",populacao2);
+    printf("População: %u\n",populacao2);
     printf("Área: %.3f Km²\n",area_km_quadrado2);
     printf("PIB: %.3f bilhões de reais\n",pib2);
     printf("Número de Pontos Turísticos: %i\n",numero_pontos_turisticos2);
